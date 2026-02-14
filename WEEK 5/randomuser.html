@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple User Shuffle</title>
+    <link rel="stylesheet" href="randomuser.css">
+</head>
+<body>
+
+    <h2>Random User List</h2>
+    <button id="shuffle-button">Shuffle Me</button>
+    <div id="main-container"></div>
+
+    <script>
+        const container = document.querySelector("#main-container");
+        const btn = document.querySelector("#shuffle-button");
+    
+        let users = [];
+
+        fetch('https://randomuser.me/api/?results=10')
+            .then(response => response.json())
+            .then(data => {
+                users = data.results;
+                displayUsers();       
+            });
+
+        const displayUsers = () => {
+            container.innerHTML = ""; 
+            users.forEach(user => {
+                container.innerHTML += `
+                    <div class="user-item">
+                        <img src="${user.picture.medium}">
+                        <div>
+                            <strong>${user.name.first} ${user.name.last}</strong>
+                            <br>${user.email}
+                        </div>
+                    </div>`;
+            });
+        };
+        
+        btn.addEventListener("click", () => {
+            users.sort(() => Math.random() - 0.5);
+            displayUsers(); 
+        });
+    </script>
+</body>
+</html>

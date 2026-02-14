@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The KQuiz</title>
+    <link rel="stylesheet" href="kquiz.css">
+</head>
+<body>
+
+    <main class="quiz-wrapper">
+
+        <section id="start-container" class="quiz-card">
+            <h1>Welcome to the K-Drama Quiz!</h1>
+            <p>How well do you know your Kdrama?</p>
+            <button id="btn-start">Start Quiz</button>
+        </section>
+
+        <section id="quiz-container" class="quiz-card display-none">
+            <div class="quiz-header">
+                <p id="question-number">Question X of Y</p>
+            </div>
+            
+            <h2 id="question-text">The question will appear here</h2>
+            
+            <div id="options-list">
+                </div>
+
+            <div id="feedback-area"></div>
+            
+            <button id="btn-next" class="display-none">Next Question</button>
+        </section>
+
+        <section id="result-container" class="quiz-card display-none">
+            <h2>All Done!</h2>
+            <p id="score-text"></p>
+            <button id="btn-restart">Let's Try That Again</button>
+        </section>
+
+    </main>
+
+    <script src="kquiz.js"></script>
+</body>
+</html>

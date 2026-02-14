@@ -1,0 +1,70 @@
+:root {
+    --bg-color: #6c5ce7;
+    --card-bg: #ffffff;
+    --button: #6c5ce7;
+    --correct: #00b894;
+    --wrong: #d63031;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.display-none {
+    display: none;
+}
+
+#options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.option-btn {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.option-btn:hover {
+    border-color: var(--button);
+}
+
+.correct { 
+    background-color: var(--correct); 
+    color: white; 
+    border-color: var(--correct); 
+}
+.wrong { 
+    background-color: var(--wrong); 
+    color: white; 
+    border-color: var(--wrong); 
+}
+
+button#btn-start, button#btn-next, button#btn-restart {
+    background: var(--button);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}

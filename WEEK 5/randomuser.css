@@ -1,0 +1,46 @@
+body { 
+    background-color:aliceblue;
+    font-family:Arial, Helvetica, sans-serif; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+h2 { 
+    color: #680c6b; 
+}
+.user-item { 
+    background-color: #680c6b;
+    color:aliceblue;
+    margin: 10px auto; 
+    padding: 10px 10px 10px 25px; 
+    width: 400px; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    border: solid 1px #680c6b; 
+    border-radius: 8px; 
+}
+        
+img { 
+    border-radius: 50%; 
+}
+
+button { 
+    padding: 10px 30px; 
+    margin: 20px 0;
+    background-color: aliceblue; 
+    color: #680c6b; 
+    border: solid 1px #680c6b; 
+    cursor: pointer; 
+    border-radius: 8px; 
+}
+
+button:hover { 
+    background-color: #680c6b; 
+    color: aliceblue; 
+    padding: 10px 30px; 
+    margin: 20px 0;
+    border: solid 1px #680c6b; 
+    cursor: pointer; 
+    border-radius: 8px; 
+}
