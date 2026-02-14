@@ -116,7 +116,6 @@ const nextBtn = document.getElementById('btn-next');
 function startQuiz() {
     currentQuestionIndex = 0;
     userScore = 0;
-    
     startScreen.classList.add('display-none');
     resultScreen.classList.add('display-none');
     quizScreen.classList.remove('display-none');
